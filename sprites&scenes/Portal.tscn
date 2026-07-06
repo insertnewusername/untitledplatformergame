@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cgavwt46vt4pu"]
+
+[ext_resource type="Texture2D" uid="uid://bjokqphjqbxk4" path="res://assets/sprites/Dimensional_Portal.png" id="1_4hdyq"]
+[ext_resource type="Script" uid="uid://b2yomn8bdb1l3" path="res://scripts/portal.gd" id="1_bagdj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bagdj"]
+radius = 28.0
+height = 112.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bagdj"]
+atlas = ExtResource("1_4hdyq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aamt4"]
+atlas = ExtResource("1_4hdyq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ti6q"]
+atlas = ExtResource("1_4hdyq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf6e3"]
+atlas = ExtResource("1_4hdyq")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cnrw"]
+atlas = ExtResource("1_4hdyq")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i63wp"]
+atlas = ExtResource("1_4hdyq")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5hry"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bagdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aamt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ti6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf6e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cnrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i63wp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Portal" type="Area2D" unique_id=107350712]
+script = ExtResource("1_bagdj")
+target_position = Vector2(1875, 288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1622009951]
+position = Vector2(7, 2)
+shape = SubResource("CapsuleShape2D_bagdj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1627589732]
+texture_filter = 1
+position = Vector2(4.0000076, 3)
+scale = Vector2(3.78125, 3.46875)
+sprite_frames = SubResource("SpriteFrames_t5hry")
+autoplay = "default"
+frame_progress = 0.3342917
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="teleport_player" from="." to="." method="_on_teleport_player"]

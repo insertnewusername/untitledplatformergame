@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://6bi1cbivnqt3"]
+
+[ext_resource type="Script" uid="uid://dl4sw8a3ecun8" path="res://scripts/winscreen.gd" id="1_ehxyi"]
+[ext_resource type="Texture2D" uid="uid://cy7gufknoftel" path="res://assets/Background/Yellow.png" id="1_y55kr"]
+[ext_resource type="FontFile" uid="uid://bhm3j34rcb7bf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_h3yos"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd04t"]
+bg_color = Color(0.33846462, 0.6484147, 0.7508416, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Node2D" type="Node2D" unique_id=554170693]
+script = ExtResource("1_ehxyi")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=598989028]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D" unique_id=1553548851]
+layout_direction = 4
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 1248.0
+offset_bottom = 688.0
+texture = ExtResource("1_y55kr")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Node2D/TextureRect" unique_id=1521759171]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -143.0
+offset_right = -3.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_h3yos")
+theme_override_font_sizes/font_size = 128
+text = "YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Node2D" unique_id=1358679146]
+offset_left = 287.0
+offset_top = 391.0
+offset_right = 873.0
+offset_bottom = 506.0
+theme_override_fonts/font = ExtResource("2_h3yos")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_pd04t")
+text = "Play again"
+
+[connection signal="pressed" from="Node2D/Button" to="." method="_on_button_pressed"]
