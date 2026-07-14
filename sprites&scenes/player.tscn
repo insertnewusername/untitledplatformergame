@@ -226,20 +226,12 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=2041509822 groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=2041509822]
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=118530795]
 position = Vector2(387, 457)
 shape = SubResource("RectangleShape2D_hqtel")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1814185453]
-position = Vector2(384, 464)
-limit_left = 218
-limit_top = -333
-limit_right = 1951
-limit_bottom = 774
-position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=486936422]
 position = Vector2(386, 433.99994)

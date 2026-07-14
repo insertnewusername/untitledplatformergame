@@ -307,12 +307,19 @@ position = Vector2(1268.5, 20)
 shape = SubResource("RectangleShape2D_kek77")
 script = ExtResource("7_uart6")
 
+[node name="Player" parent="LevelRoot" unique_id=2041509822 instance=ExtResource("11_3lj53")]
+scale = Vector2(1.0356803, 1.1444949)
+
+[node name="Camera2D" type="Camera2D" parent="LevelRoot/Player" unique_id=887720252]
+scale = Vector2(-94.712845, 1)
+limit_left = 221
+limit_top = -340
+limit_right = 1955
+limit_bottom = 774
+
 [node name="Portal" parent="." unique_id=166896413 instance=ExtResource("9_lpnvu")]
 position = Vector2(290, 336)
 script = null
-
-[node name="Player" parent="." unique_id=2041509822 instance=ExtResource("11_3lj53")]
-position = Vector2(-59, 61)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=712710876]
 
@@ -345,5 +352,4 @@ text = "Score:0"
 
 [connection signal="body_entered" from="LevelRoot/Flag" to="." method="_on_flag_body_entered"]
 [connection signal="body_entered" from="LevelRoot/Area2D" to="LevelRoot/Area2D" method="_on_body_entered"]
-[connection signal="teleport_player" from="LevelRoot/Portal" to="Player" method="_on_portal_teleport_player"]
 [connection signal="body_entered" from="LevelRoot/Area2D2" to="LevelRoot/Area2D2" method="_on_body_entered"]
