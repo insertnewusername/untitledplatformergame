@@ -3,36 +3,36 @@
 [ext_resource type="Texture2D" uid="uid://byvgw0ffbjqk" path="res://assets/sprites/slime_green.png" id="1_iplyg"]
 [ext_resource type="Script" uid="uid://mrnx0chhoiyb" path="res://scripts/blob.gd" id="1_wigkh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iplyg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_in8v4"]
 atlas = ExtResource("1_iplyg")
-region = Rect2(0, 26, 24, 22)
+region = Rect2(0, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wigkh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p5c3"]
 atlas = ExtResource("1_iplyg")
-region = Rect2(24, 26, 24, 22)
+region = Rect2(24, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jle3w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6b71"]
 atlas = ExtResource("1_iplyg")
-region = Rect2(48, 26, 24, 22)
+region = Rect2(48, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aaw6g"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx4iy"]
 atlas = ExtResource("1_iplyg")
-region = Rect2(72, 26, 24, 22)
+region = Rect2(72, 24, 24, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mghtv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_bsb70"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iplyg")
+"texture": SubResource("AtlasTexture_in8v4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wigkh")
+"texture": SubResource("AtlasTexture_2p5c3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jle3w")
+"texture": SubResource("AtlasTexture_x6b71")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aaw6g")
+"texture": SubResource("AtlasTexture_lx4iy")
 }],
 "loop": true,
 "name": &"default",
@@ -43,12 +43,13 @@ animations = [{
 size = Vector2(12, 12)
 
 [node name="Blob" type="Area2D" unique_id=1847572313]
+texture_filter = 1
 script = ExtResource("1_wigkh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2066344055]
-sprite_frames = SubResource("SpriteFrames_mghtv")
+sprite_frames = SubResource("SpriteFrames_bsb70")
 autoplay = "default"
-frame_progress = 0.2713279
+frame_progress = 0.44862154
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=663077226]
 position = Vector2(0, 5)
