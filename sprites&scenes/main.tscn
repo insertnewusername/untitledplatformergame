@@ -314,6 +314,14 @@ script = null
 [node name="Player" parent="." unique_id=2041509822 instance=ExtResource("11_wknba")]
 position = Vector2(-59, 61)
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=364256015]
+position = Vector2(384, 464)
+limit_left = 218
+limit_top = -333
+limit_right = 1951
+limit_bottom = 774
+position_smoothing_enabled = true
+
 [node name="HUD" type="CanvasLayer" parent="." unique_id=712710876]
 
 [node name="Scorepanel" type="Panel" parent="HUD" unique_id=1229465976]
