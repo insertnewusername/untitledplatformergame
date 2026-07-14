@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://5cta0to3wxjn"]
 
 [ext_resource type="Script" uid="uid://k5pi11b3816e" path="res://scripts/main.gd" id="1_fcrpu"]
-[ext_resource type="Texture2D" uid="uid://b14rgc7x1276u" path="res://assets/Background/Green.png" id="2_nk22v"]
+[ext_resource type="Texture2D" uid="uid://bnb76rt83kjdq" path="res://assets/Background/Blue.png" id="2_fcrpu"]
 [ext_resource type="Texture2D" uid="uid://b8fbbxet23j6l" path="res://assets/sprites/platforms.png" id="3_npat1"]
 [ext_resource type="Texture2D" uid="uid://b0v5qa2sckfa5" path="res://assets/sprites/world_tileset.png" id="4_ql7b1"]
 [ext_resource type="PackedScene" uid="uid://cua0740hidqcj" path="res://sprites&scenes/flag.tscn" id="5_kuaol"]
@@ -228,16 +228,17 @@ metadata/_edit_horizontal_guides_ = [35.0]
 
 [node name="TextureRect" type="TextureRect" parent="LevelRoot" unique_id=1583929777]
 anchors_preset = -1
-anchor_top = -0.67600006
-anchor_right = 1.8460001
-anchor_bottom = 1.511
-offset_left = 74.0
-offset_top = 40.048035
-offset_right = -105.59204
-offset_bottom = -77.12805
+anchor_left = -0.17400001
+anchor_top = -1.177
+anchor_right = 2.371
+anchor_bottom = 1.733
+offset_left = 0.4480133
+offset_top = 7.696045
+offset_right = 7.60791
+offset_bottom = 0.015991211
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_nk22v")
+texture = ExtResource("2_fcrpu")
 expand_mode = 1
 stretch_mode = 1
 
