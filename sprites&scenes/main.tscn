@@ -97,6 +97,7 @@ texture = ExtResource("4_wwolt")
 4:2/0 = 0
 5:2/0 = 0
 6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:2/0 = 0
 8:2/0 = 0
 9:2/0 = 0
@@ -203,10 +204,10 @@ sources/2 = SubResource("TileSetAtlasSource_1bvp3")
 sources/0 = SubResource("TileSetAtlasSource_kek77")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
-size = Vector2(826, 82)
+size = Vector2(892, 147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kek77"]
-size = Vector2(507, 82)
+size = Vector2(438, 98)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
 bg_color = Color(0.3250287, 0.6427367, 0.7952823, 1)
@@ -232,9 +233,9 @@ anchor_top = -0.67600006
 anchor_right = 1.8460001
 anchor_bottom = 1.511
 offset_left = 74.0
-offset_top = 40.048035
+offset_top = 69.048035
 offset_right = -105.59204
-offset_bottom = -77.12805
+offset_bottom = -48.12805
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_34bsu")
@@ -254,7 +255,7 @@ position = Vector2(269, -236)
 script = ExtResource("6_8a4rr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/Area2D" unique_id=789355920]
-position = Vector2(1114, 683)
+position = Vector2(1146, 707.5)
 shape = SubResource("RectangleShape2D_h2yge")
 script = ExtResource("7_wktm8")
 
@@ -303,7 +304,7 @@ position = Vector2(95.83333, -26)
 script = ExtResource("6_8a4rr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/Area2D2" unique_id=1877955925]
-position = Vector2(1268.5, 20)
+position = Vector2(1252, 11)
 shape = SubResource("RectangleShape2D_kek77")
 script = ExtResource("7_wktm8")
 

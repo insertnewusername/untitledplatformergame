@@ -41,4 +41,8 @@ func _on_flag_body_entered(body: Node2D) -> void:
 		call_deferred("level2")
 	
 func level2():
-	get_tree().change_scene_to_file("res://sprites&scenes/level2.tscn")
+	var current_scene_path = get_tree().current_scene.scene_file_path
+	if current_scene_path.contains("level2.tscn"):
+		get_tree().change_scene_to_file("res://sprites&scenes/winscreen.tscn")
+	else:
+		get_tree().change_scene_to_file("res://sprites&scenes/level2.tscn")
