@@ -207,7 +207,7 @@ sources/0 = SubResource("TileSetAtlasSource_kek77")
 size = Vector2(826, 82)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kek77"]
-size = Vector2(507, 82)
+size = Vector2(666.5, 176)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
 bg_color = Color(0.3250287, 0.6427367, 0.7952823, 1)
@@ -263,7 +263,7 @@ script = ExtResource("7_uart6")
 [node name="Enemies" type="Node2D" parent="LevelRoot" unique_id=1052197729]
 
 [node name="Blob" parent="LevelRoot/Enemies" unique_id=1854355813 instance=ExtResource("8_jog3v")]
-position = Vector2(1054.0002, 523)
+position = Vector2(1536.0001, 615)
 scale = Vector2(5.168969, 5.168969)
 
 [node name="Blob2" parent="LevelRoot/Enemies" unique_id=1847572313 instance=ExtResource("8_jog3v")]
@@ -301,13 +301,11 @@ position = Vector2(209.33333, -21)
 [node name="Coin8" parent="LevelRoot/Coin" unique_id=110710647 instance=ExtResource("10_acc1h")]
 position = Vector2(95.83333, -26)
 
-[node name="Area2D2" type="Area2D" parent="LevelRoot" unique_id=224244464]
-script = ExtResource("6_3q7uf")
+[node name="Area2D3" type="Area2D" parent="LevelRoot" unique_id=298166347]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/Area2D2" unique_id=1877955925]
-position = Vector2(1268.5, 20)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelRoot/Area2D3" unique_id=1877955925]
+position = Vector2(946.75, 636)
 shape = SubResource("RectangleShape2D_kek77")
-script = ExtResource("7_uart6")
 
 [node name="Portal" parent="." unique_id=166896413 instance=ExtResource("9_lpnvu")]
 position = Vector2(290, 336)
@@ -356,4 +354,5 @@ text = "Score:0"
 [connection signal="body_entered" from="LevelRoot/Flag" to="." method="_on_flag_body_entered"]
 [connection signal="body_entered" from="LevelRoot/Area2D" to="LevelRoot/Area2D" method="_on_body_entered"]
 [connection signal="teleport_player" from="LevelRoot/Portal" to="Player" method="_on_portal_teleport_player"]
-[connection signal="body_entered" from="LevelRoot/Area2D2" to="LevelRoot/Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="LevelRoot/Area2D3" to="Player" method="_on_area_2d_3_body_entered"]
+[connection signal="body_exited" from="LevelRoot/Area2D3" to="Player" method="_on_area_2d_3_body_exited"]

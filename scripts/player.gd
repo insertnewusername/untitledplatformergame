@@ -9,7 +9,10 @@ const JUMP_VELOCITY = -450.0
 var alive = true
 var respawn_x = 0.0
 var respawn_y = 166.0
-
+var accelerationvalue = 0.01
+var slidevalue = 0.01
+var stopvalue = 15
+var onice = false
 
 func _ready():
 	animated_sprite_2d.animation_finished.connect(_on_animation_finished)
@@ -30,13 +33,16 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
-		animated_sprite_2d.animation = "walk"
-		sprite.flip_h = direction <0
+	if onice:
+		move_on_ice(direction)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		animated_sprite_2d.animation = "idle"
+		if direction:
+			velocity.x = direction * SPEED
+			animated_sprite_2d.animation = "walk"
+			sprite.flip_h = direction <0
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+			animated_sprite_2d.animation = "idle"
 	move_and_slide()
 	
 func die() -> void:
@@ -62,8 +68,23 @@ func _on_portal_teleport_player(pos: Vector2):
 	velocity = Vector2.ZERO
 	animated_sprite_2d.play("idle")
 	
-
-
-
-
+func move_on_ice(direction):
+	if direction:
+		sprite.flip_h = direction <0
+		velocity.x = lerp(velocity.x, direction * SPEED, accelerationvalue)
+	else:
+		velocity.x = lerp(velocity.x, 0.0, slidevalue)
+			
+		if velocity.x < stopvalue and  velocity.x > -stopvalue:
+			velocity.x = 0
 	
+
+
+func _on_area_2d_3_body_entered(body: Node2D) -> void:
+	if body == self:
+		onice = true
+
+
+func _on_area_2d_3_body_exited(body: Node2D) -> void:
+	if body == self:
+		onice = false
