@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://ljyijkmjs7jj"]
+
+[ext_resource type="Script" uid="uid://qxutxap0mdna" path="res://scripts/start.gd" id="1_hhvd4"]
+[ext_resource type="Texture2D" uid="uid://b77cagccjbta6" path="res://assets/Background/Gray.png" id="1_rndmh"]
+[ext_resource type="FontFile" uid="uid://bhm3j34rcb7bf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_yyev7"]
+[ext_resource type="FontFile" uid="uid://8m3n2sdemjwl" path="res://assets/fonts/PixelOperator8.ttf" id="3_co2dx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_co2dx"]
+bg_color = Color(0.5300365, 0.6024264, 0.73898405, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhvd4"]
+bg_color = Color(0.51671815, 0.61013895, 0.7205684, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.71128535, 0.81770676, 0.89274496, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcfdf"]
+bg_color = Color(0.43354404, 0.529614, 0.64136636, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.54118234, 0.7030679, 0.81047595, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Node2D" type="Node2D" unique_id=1220600264]
+script = ExtResource("1_hhvd4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1991492795]
+offset_left = -175.0
+offset_top = -129.0
+offset_right = 1329.0
+offset_bottom = 791.0
+texture = ExtResource("1_rndmh")
+stretch_mode = 1
+
+[node name="Control" type="Control" parent="." unique_id=431849724]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 652.0
+
+[node name="Panel" type="Panel" parent="Control" unique_id=372564635]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -540.0
+offset_right = 540.0
+offset_bottom = 123.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_co2dx")
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=1370736200]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -528.25
+offset_top = -25.5
+offset_right = 528.25
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_yyev7")
+theme_override_font_sizes/font_size = 48
+text = "Untitled Platformer Game"
+
+[node name="Button" type="Button" parent="Control" unique_id=1528072978]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 313.0
+offset_right = 786.0
+offset_bottom = 436.0
+theme_override_fonts/font = ExtResource("3_co2dx")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fcfdf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_hhvd4")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hhvd4")
+text = "Play"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
