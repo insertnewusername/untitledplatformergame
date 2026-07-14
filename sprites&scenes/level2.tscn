@@ -298,25 +298,25 @@ scale = Vector2(6, 6)
 position = Vector2(263.1667, 26.5)
 
 [node name="Coin2" parent="LevelRoot/Coin" unique_id=929897692 instance=ExtResource("10_acc1h")]
-position = Vector2(94.5, 46.166668)
+position = Vector2(96.666664, -9.5)
 
 [node name="Coin3" parent="LevelRoot/Coin" unique_id=1095326459 instance=ExtResource("10_acc1h")]
-position = Vector2(155.33334, 41.5)
+position = Vector2(155.33333, 2)
 
 [node name="Coin4" parent="LevelRoot/Coin" unique_id=2137947375 instance=ExtResource("10_acc1h")]
-position = Vector2(259.33334, 82.66667)
+position = Vector2(280.5, 66.166664)
 
 [node name="Coin5" parent="LevelRoot/Coin" unique_id=1160097419 instance=ExtResource("10_acc1h")]
-position = Vector2(129.33334, 87.833336)
+position = Vector2(133.5, 82.833336)
 
 [node name="Coin6" parent="LevelRoot/Coin" unique_id=2073340003 instance=ExtResource("10_acc1h")]
-position = Vector2(283.33334, -5.833336)
+position = Vector2(359.6667, 41.5)
 
 [node name="Coin7" parent="LevelRoot/Coin" unique_id=908746986 instance=ExtResource("10_acc1h")]
-position = Vector2(209.33333, -21)
+position = Vector2(251.16666, -78.5)
 
 [node name="Coin8" parent="LevelRoot/Coin" unique_id=110710647 instance=ExtResource("10_acc1h")]
-position = Vector2(95.83333, -26)
+position = Vector2(109.666664, -78.5)
 
 [node name="Area2D3" type="Area2D" parent="LevelRoot" unique_id=298166347]
 
