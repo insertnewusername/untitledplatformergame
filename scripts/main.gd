@@ -38,4 +38,7 @@ func increase_score() -> void:
 
 func _on_flag_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		get_tree().change_scene_to_file("res://sprites&scenes/winscreen.tscn")
+		call_deferred("level2")
+	
+func level2():
+	get_tree().change_scene_to_file("res://sprites&scenes/level2.tscn")
