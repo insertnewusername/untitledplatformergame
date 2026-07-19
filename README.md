@@ -52,7 +52,10 @@ Background assets - https://pixelfrog-assets.itch.io/pixel-adventure-1
 
 Portal - https://pixelnauta.itch.io/pixel-dimensional-portal-32x32
 
-Tutorial videos: (and others in series)
+Tutorial videos: 
+https://www.youtube.com/watch?v=oED12Mo2018
+
+https://www.youtube.com/watch?v=Z9W4bSdeC04
 
 
 This project is for #horizons
